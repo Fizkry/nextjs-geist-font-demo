@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    flex: 1;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* Cards */
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Tables */
+.table th {
+    border-top: none;
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.datatable {
+    width: 100% !important;
+}
+
+/* Forms */
+.form-control:focus, 
+.form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+    font-weight: 500;
+}
+
+.btn-group-sm > .btn {
+    padding: .25rem .5rem;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5em 0.75em;
+}
+
+/* Charts */
+canvas {
+    max-width: 100%;
+}
+
+/* Stock Status Cards */
+.card.bg-success,
+.card.bg-warning,
+.card.bg-danger {
+    transition: transform 0.2s;
+}
+
+.card.bg-success:hover,
+.card.bg-warning:hover,
+.card.bg-danger:hover {
+    transform: translateY(-2px);
+}
+
+/* Material Rows */
+.material-row {
+    position: relative;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+    margin-bottom: 1rem;
+}
+
+.material-row:hover {
+    background-color: #f0f0f0;
+}
+
+.remove-material {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand img {
+        height: 24px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-group-sm > .btn {
+        padding: .375rem .75rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+    
+    .card {
+        background-color: #2d2d2d;
+        border-color: #404040;
+    }
+    
+    .card-header {
+        background-color: #333;
+        border-bottom-color: #404040;
+    }
+    
+    .table {
+        color: #fff;
+    }
+    
+    .table th {
+        background-color: #333;
+    }
+    
+    .table td {
+        border-color: #404040;
+    }
+    
+    .form-control,
+    .form-select {
+        background-color: #333;
+        border-color: #404040;
+        color: #fff;
+    }
+    
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #404040;
+        border-color: #666;
+        color: #fff;
+    }
+    
+    .material-row {
+        background-color: #333;
+    }
+    
+    .material-row:hover {
+        background-color: #404040;
+    }
+    
+    .modal-content {
+        background-color: #2d2d2d;
+        border-color: #404040;
+    }
+    
+    .modal-header {
+        border-bottom-color: #404040;
+    }
+    
+    .modal-footer {
+        border-top-color: #404040;
+    }
+    
+    .close {
+        color: #fff;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .table {
+        width: 100% !important;
+        border: 1px solid #dee2e6 !important;
+    }
+    
+    .table td,
+    .table th {
+        border: 1px solid #dee2e6 !important;
+    }
+}
